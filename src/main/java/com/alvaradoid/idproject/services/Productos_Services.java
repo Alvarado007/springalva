@@ -12,8 +12,9 @@ public class Productos_Services {
     public List<Productos> finAll() {
         return repositorio.finAll().stream().map(p->{
             Double precioTotal=p.getPrecio()*1.50d;
-            p.setPrecio(precioTotal.intValue());
-            return p;
+            Productos newProductos =(Productos)p.clone();
+            newProductos.setPrecio(precioTotal.intValue());
+            return newProductos;
         }).collect(Collectors.toList());
     }
     public Productos buscaId(long idproducto){
