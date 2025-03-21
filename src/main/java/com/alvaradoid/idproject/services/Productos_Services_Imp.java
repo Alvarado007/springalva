@@ -1,13 +1,13 @@
 package com.alvaradoid.idproject.services;
 import com.alvaradoid.idproject.models.Productos;
-import com.alvaradoid.idproject.repositorios.Repo_Productos;
+import com.alvaradoid.idproject.repositorios.Repo_Productos_Imp;
 
 import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class Productos_Services {
-    private Repo_Productos repositorio = new Repo_Productos();
+public class Productos_Services_Imp {
+    private Repo_Productos_Imp repositorio = new Repo_Productos_Imp();
 
     public List<Productos> finAll() {
         return repositorio.finAll().stream().map(p->{

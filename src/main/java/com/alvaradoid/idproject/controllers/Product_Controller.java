@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alvaradoid.idproject.models.Productos;
-import com.alvaradoid.idproject.services.Productos_Services;
+import com.alvaradoid.idproject.services.Productos_Services_Imp;
 
 @RestController
 @RequestMapping("/api")
 public class Product_Controller {
-    private Productos_Services servicios = new Productos_Services();
+    private Productos_Services_Imp servicios = new Productos_Services_Imp();
     @GetMapping()
     public List<Productos> ListProductos(){
         return servicios.finAll();

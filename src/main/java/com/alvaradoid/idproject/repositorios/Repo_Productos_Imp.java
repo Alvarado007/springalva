@@ -5,10 +5,10 @@ import java.util.List;
 
 import com.alvaradoid.idproject.models.Productos;
 
-public class Repo_Productos {
+public class Repo_Productos_Imp {
     List<Productos> datos;
 
-    public Repo_Productos() {
+    public Repo_Productos_Imp() {
         this.datos = Arrays.asList(
             new Productos(1, "Producto 1", 100),
             new Productos(2, "Producto 2", 200),
