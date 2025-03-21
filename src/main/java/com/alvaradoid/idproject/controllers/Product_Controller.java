@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alvaradoid.idproject.models.Productos;
-import com.alvaradoid.idproject.services.Productos_Services_Imp;
+import com.alvaradoid.idproject.services.ProductoServicios;
 
 @RestController
 @RequestMapping("/api")
 public class Product_Controller {
     @Autowired
-    private Productos_Services_Imp servicios;
+    private ProductoServicios servicios;
     @GetMapping()
     public List<Productos> ListProductos(){
         return servicios.finAll();

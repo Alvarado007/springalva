@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Productos_Services_Imp implements ProductoServicios {
     @Autowired
-        private Repo_Productos_Imp repositorio;
+        private ProductoRepositorio repositorio;
 
         @Override
         public List<Productos> finAll() {
