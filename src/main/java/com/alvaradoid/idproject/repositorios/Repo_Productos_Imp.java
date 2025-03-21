@@ -3,9 +3,12 @@ package com.alvaradoid.idproject.repositorios;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.alvaradoid.idproject.models.Productos;
 
-public class Repo_Productos_Imp {
+@Component
+public class Repo_Productos_Imp implements ProductoRepositorio {
     List<Productos> datos;
 
     public Repo_Productos_Imp() {
